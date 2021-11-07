@@ -1,10 +1,14 @@
 <template>
 <Message :msg="msg" v-show="msg"/>
   <div class="container">
+    <div class="text-center p-4">
+      <h1>Gerenciamento de pedidos</h1>
+    </div>
     
-       <table class="table table-hover text-center" align="center">
+       <table class="table table-hover text-center">
 	
         <thead>
+          <tr>
           <th scope="col">ID</th>
 	        <th scope="col">Cliente</th>	
           <th scope="col">Pão</th>
@@ -12,6 +16,7 @@
           <th scope="col">Opcionais</th>
           <th scope="col">Status</th>
           <th scope="col">Ações</th>
+          </tr>
         </thead>
 
         <tbody>
@@ -23,7 +28,7 @@
             <td>
               <ul>
                 <span v-for="(opcional, index) in burger.opcionais" :key="index">
-                  {{opcional}}
+                  {{opcional + ', '}}
                 </span>
               </ul>
             </td>
@@ -57,7 +62,7 @@ export default {
       burgers: null,
       burger_id: null,
       status: [],
-      msg: null
+      msg: null,
     }
   },
   components:{
@@ -125,5 +130,27 @@ export default {
 table{
   height: 100%;
 }
+
+table thead{
+  background-color: rgb(36, 31, 8);
+  color: #fff;
+}
+
+table border{
+  background-color: blue;
+}
+
+.table-hover tr:hover{
+  background-color: none;
+  color: #fff;
+}
+
+.form-select{
+  border-color: #ffc107;
+  
+}
  
+/* .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #fff;
+} */
 </style>

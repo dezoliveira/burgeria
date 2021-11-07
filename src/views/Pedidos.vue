@@ -1,5 +1,4 @@
 <template>
-    <h1>Gerenciar Pedidos</h1>
     <Dashboard />
 </template>
 

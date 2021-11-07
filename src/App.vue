@@ -10,25 +10,25 @@
 <script>
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
-import Banner from './components/Banner.vue'
 
 export default {
   data(){
     return {
-      logoBurgeria: "img/Logo.jpg",
+      logoBurgeria: "img/Logo5.png",
       altBurgeria: "Burgeria"
     }
   },
   components: {
     Navbar,
     Footer,
-    Banner
   },
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
   *{
     box-sizing: border-box;
+    font-family: 'Monterrat', sans-serif;
   }
 </style>

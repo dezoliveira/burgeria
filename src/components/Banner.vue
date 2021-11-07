@@ -1,7 +1,7 @@
 <template>
 <div id="banner">
-  <div class="info">
-    <p>Faça o seu hamburger</p>
+  <div class="info text-center py-4">
+    <a>Faça o seu hamburger</a>
   </div>
 </div>
 </template>
@@ -25,5 +25,16 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+  .info{
+    border-color: gold;
+    border: 2px solid gold;
+    font-size: 30px;
+    transition: 0.5s all ease;
+    text-transform: uppercase;
+  }
+
+  .info:hover{
+    transform: translateY(-40px);
   }
 </style>

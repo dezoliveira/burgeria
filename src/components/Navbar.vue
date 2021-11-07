@@ -1,14 +1,14 @@
 <template>
-  <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark px-5 d-flex justify-content-between">
+  <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark p-0 px-5 d-flex justify-content-between">
     <div class="navbrand">
       <router-link to="/">
         <a class="navbar-brand text-white" href="#">
-          <img :src="logo" :alt="alt" id="logo">LA BURGERIA
+          <img :src="logo" :alt="alt" id="logo">
         </a>
        </router-link>
     </div>
-    <div class="nav-itens">
-      <router-link to="/">Home</router-link> |
+    <div class="nav-itens text-warning">
+      <router-link to="/">Home</router-link>
       <router-link to="/pedidos">Pedidos</router-link>
     </div>
   </nav>
@@ -20,21 +20,19 @@ export default {
 }
 </script>
 <style scoped>
-  *{
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-  }
   img{
-    width: 32px;
+    width: 50px;
   }
+
   .nav-itens a{
     color: gold;
     text-decoration: none;
     list-style: none;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
   }
-
-  router-link{
-    color: blueviolet;
+  .nav-itens a:hover{
+    color: #fff;
   }
 </style>

@@ -10,7 +10,6 @@
     <div class="container col-4 mb-4">
       <label for="pao" class="form-label">Selecione o Pão</label>
         <select class="form-select" name="pao" v-model="pao">
-          <option selected>Selecione o Pão</option>
           <option 
             v-for="pao in paes"
             :key="pao.id"
@@ -21,7 +20,7 @@
     <div class="container col-4 mb-4">
       <label for="carne" class="form-label">Selecione a Carne</label>
         <select class="form-select" name="carne" v-model="carne">
-          <option selected>Selecione a Carne</option>
+          <!-- <option selected>Selecione a Carne</option> -->
           <option 
             v-for="carne in carnes"
             :key="carne.id"
@@ -32,16 +31,18 @@
     </div>
     <div class="container col-4 mb-4">
       <label for="opcionais">Selecione os opcionais</label>
-      <div class="form-check mb-2" 
-        v-for="opcional in opcionaisData"
-        :key="opcional.id">
-        <input type="checkbox" name="opcionais" class="form-check-input"
+      <div class="mt-2">
+         <div class="form-check form-check-inline mb-2" 
+          v-for="opcional in opcionaisData"
+          :key="opcional.id">
+          <input type="checkbox" name="opcionais" class="form-check-input"
           v-model="opcionais"
           :value="opcional.tipo"
         >
-        <label for="opcionais" class="form-check-label">
-          {{opcional.tipo}}
-        </label>
+          <label for="opcionais" class="form-check-label">
+            {{opcional.tipo}}
+          </label>
+        </div>
       </div>
     </div>
     <div class="container col-4 d-flex justify-content-center">
@@ -106,7 +107,6 @@ export default {
       this.carne = ""
       this.pao = ""
       this.opcionais = []
-      
     }
   },
   mounted() {
@@ -115,7 +115,14 @@ export default {
 }
 </script>
 <style scoped>
-  .formulario{
 
+  .form-check-label{
+    margin-left: 10px;
+    text-align: justify;
   }
+  
+  .form-check-input:checked{
+    background-color: #222;
+  }
+
 </style>
