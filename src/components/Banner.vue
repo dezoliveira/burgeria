@@ -32,6 +32,7 @@ export default {
     font-size: 30px;
     transition: 0.5s all ease;
     text-transform: uppercase;
+    font-weight:400;
   }
 
   .info:hover{

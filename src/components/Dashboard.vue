@@ -27,8 +27,8 @@
             <td>{{burger.carne}}</td> 
             <td>
               <ul>
-                <span v-for="(opcional, index) in burger.opcionais" :key="index">
-                  {{opcional + ', '}}
+                <span v-for="(opcional, index) in burger.opcionais.join(', ')" :key="index">
+                  {{opcional}}
                 </span>
               </ul>
             </td>

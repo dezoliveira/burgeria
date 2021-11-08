@@ -8,7 +8,7 @@
       <input type="text" class="form-control" id="nome" v-model="nome" placeholder="Insira seu nome">
     </div>
     <div class="container col-4 mb-4">
-      <label for="pao" class="form-label">Selecione o Pão</label>
+      <label for="pao" class="form-label">Selecione o Pão:</label>
         <select class="form-select" name="pao" v-model="pao">
           <option 
             v-for="pao in paes"
@@ -18,7 +18,7 @@
         </select>
     </div>
     <div class="container col-4 mb-4">
-      <label for="carne" class="form-label">Selecione a Carne</label>
+      <label for="carne" class="form-label">Selecione a Carne:</label>
         <select class="form-select" name="carne" v-model="carne">
           <!-- <option selected>Selecione a Carne</option> -->
           <option 
@@ -30,16 +30,16 @@
         </select>
     </div>
     <div class="container col-4 mb-4">
-      <label for="opcionais">Selecione os opcionais</label>
+      <label for="opcionais">Selecione os Opcionais:</label>
       <div class="mt-2">
-         <div class="form-check form-check-inline mb-2" 
+         <div class="form-check form-check-inline mb-2 mx-1" 
           v-for="opcional in opcionaisData"
           :key="opcional.id">
           <input type="checkbox" name="opcionais" class="form-check-input"
           v-model="opcionais"
           :value="opcional.tipo"
-        >
-          <label for="opcionais" class="form-check-label">
+          >
+          <label for="opcionais" class="form-check-label mx-0">
             {{opcional.tipo}}
           </label>
         </div>
@@ -123,6 +123,15 @@ export default {
   
   .form-check-input:checked{
     background-color: #222;
+  }
+
+  .form-label{
+    padding-left: 5px;
+    border-left: 4px gold;
+    border-right: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+    border-style: solid;
   }
 
 </style>
